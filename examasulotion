@@ -1,6 +1,7 @@
+ex01: 
+
 #include <stdio.h>
 #include "list.h"
-
 typedef struct Node {
 int value;
 struct Node* next;
@@ -30,3 +31,26 @@ void insert(Node** head, int value, int k) {
     setNext(newNode, getNext(current));
     setNext(current, newNode);
     }
+
+ex02:
+
+#include <stdio.h>
+#include "list.h"
+typedef struct Node {
+int value; 
+struct Node* next; 
+struct Node* prev; 
+} Node;
+void reverse(Node** head) {
+    Node* current = *head; 
+    Node* temp = NULL; 
+    while (current != NULL) {
+        temp = getNext(current); 
+        setNext(current, getPrev(current)); 
+        setPrev(current, temp); 
+        current = getPrev(current);
+    }
+    if (temp != NULL) {
+        *head = getPrev(temp); 
+    }
+}
