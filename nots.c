@@ -1,11 +1,15 @@
 1 BASICS OF C PROGRAMMING 
+  
 1.1 HELLO, WORLD! PROGRAM 
+  
 #include <stdio.h>
 int main() {
 printf("Hello, World!\n");
 return 0;
 }
+
 1.2 SUM OF TWO INTEGERS 
+  
 #include <stdio.h>
 int main() {
 int a, b;
@@ -14,7 +18,9 @@ scanf("%d %d", &a, &b);
 printf("Sum: %d\n", a + b);
 return 0;
 }
+
 1.3 AREA OF A RECTANGLE 
+  
 #include <stdio.h>
 int main() {
 float length, breadth;
@@ -23,7 +29,9 @@ scanf("%f %f", &length, &breadth);
 printf("Area: %.2f\n", length * breadth);
 return 0;
 }
+
 1.4 SWAP TWO NUMBERS WITHOUT TEMPORARY VARIABLE 
+  
 #include <stdio.h>
 int main() {
 int a, b;
@@ -35,7 +43,9 @@ a = a - b;
 printf("After swapping: a = %d, b = %d\n", a, b);\\ \n not working,a=%d\n for line b line 
 return 0;
 }
+
 1.5 CHECK IF A NUMBER IS EVEN OR ODD 
+  
 #include <stdio.h>
 int main() {
 int num;
@@ -47,8 +57,10 @@ else
 printf("%d is odd\n", num);
 return 0;
 }
+
 2 CONTROL STATEMENTS 
 2.1 LARGEST OF THREE NUMBERS USING IF-ELSE 
+  
 #include <stdio.h>
 int main() {
 int a, b, c;
@@ -62,7 +74,9 @@ else
 printf("%d is the largest\n", c);
 return 0;
 }
+
 2.2 CHECK IF A NUMBER IS POSITIVE, NEGATIVE, OR ZERO 
+  
 #include <stdio.h>
 int main() {
 int num;
@@ -76,7 +90,9 @@ else
 printf("The number is zero\n");
 return 0;
 }
+
 2.3 FACTORIAL OF A NUMBER USING A FOR LOOP 
+
 #include <stdio.h>
 int main() {
 int num, factorial = 1;
@@ -88,7 +104,9 @@ factorial *= i;
 printf("Factorial: %d\n", factorial);
 return 0;
 }
+
 2.4 PRINT THE FIRST N NATURAL NUMBERS USING A WHILE LOOP 
+
 #include <stdio.h>
 int main() {
 int n, i = 1;
@@ -101,7 +119,9 @@ i++;
 printf("\n");\\ not working, in order to write line b line we enter it into the loop
 return 0;
 }
+
 2.5 DISPLAY MULTIPLICATION TABLE OF A GIVEN NUMBER 
+  
 #include <stdio.h>
 int main() {
 int num;
@@ -112,8 +132,10 @@ printf("%d x %d = %d\n", num, i, num * i);
 }
 return 0;
 }
+
 3 ARRAYS 
 3.1 STORE 5 INTEGERS IN AN ARRAY AND PRINT THEM 
+  
 #include <stdio.h>
 int main() {
 int arr[5];
@@ -128,7 +150,9 @@ printf("%d ", arr[i]);
 printf("\n");\\not working,in order to write line b line we enter it into the loop2
 return 0;
 }
+
 3.2 FIND THE LARGEST AND SMALLEST ELEMENTS IN AN ARRAY 
+  
 #include <stdio.h>
 int main() {
 int arr[5], largest, smallest;
@@ -144,7 +168,9 @@ if (arr[i] < smallest) smallest = arr[i];
 printf("Largest: %d, Smallest: %d\n", largest, smallest);\\ \n not working, largest:%d\n for print line b line
 return 0;
 }
+
 3.3 CALCULATE THE SUM AND AVERAGE OF ELEMENTS IN AN ARRAY 
+  
 #include <stdio.h>
 int main() {
 int arr[5], sum = 0;
@@ -160,7 +186,9 @@ avg = sum / 5.0;
 printf("Sum: %d, Average: %.2f\n", sum, avg); \\ dont write  %.2f we can write just  %f 
   return 0;
 }
+
 3.4 REVERSE AN ARRAY 
+  
 #include <stdio.h>
 int main() {
 int arr[5], temp;
@@ -180,7 +208,9 @@ printf("%d ", arr[i]);
 printf("\n");
 return 0;
 }
+
 3.5 MERGE TWO ARRAYS INTO A SINGLE ARRAY 
+  
 #include <stdio.h>
 int main() {
 int arr1[5], arr2[5], merged[10];
@@ -203,8 +233,10 @@ printf("%d ", merged[i]);
 printf("\n");\\in order to write line by line we enter it into the loop
 return 0;
 }
+
 8 FILE HANDLING 
 8.1 CREATE A FILE AND WRITE "HELLO, WORLD!" 
+  
 #include <stdio.h>
 int main() {
 FILE* file = fopen("hello.txt", "w");
